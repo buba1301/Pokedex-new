@@ -1,19 +1,13 @@
 import React from 'react';
+import LeftSection from '../../components/LeftSection';
+import Paralax from '../../components/Paralax';
 
 const Home = () => {
   console.log('RENDER HOME');
   return (
     <main>
-      <section>
-        <h1></h1>
-        <p></p>
-        <button></button>
-      </section>
-      <section>
-        <div>
-          <img />
-        </div>
-      </section>
+      <LeftSection />
+      <Paralax />
     </main>
   );
 };

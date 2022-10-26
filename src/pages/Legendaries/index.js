@@ -1,30 +1,29 @@
 import React from 'react';
+import SerachandFiltersForm from '../../components/SearchandFiltersForm';
 
-const Legendaries = () => {
-  return (
-    <main>
-      <h1>Legendaries</h1>
+const Legendaries = () => (
+  <main>
+    <h1>Legendaries</h1>
+    <div>
       <div>
-        <div>
-          <img />
-        </div>
-        <div>
-          <h2></h2>
-          <p></p>
-          <div>
-            <ul>
-              <li></li>
-            </ul>
-          </div>
-        </div>
+        <img />
       </div>
       <div>
-        <ul>
-          <li></li>
-        </ul>
+        <h2 />
+        <p />
+        <div>
+          <ul>
+            <li />
+          </ul>
+        </div>
       </div>
-    </main>
-  );
-};
+    </div>
+    <div>
+      <ul>
+        <li />
+      </ul>
+    </div>
+  </main>
+);
 
 export default Legendaries;
