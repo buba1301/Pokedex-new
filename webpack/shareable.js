@@ -5,7 +5,9 @@ module.exports = {
     alias: {
       shared: path.resolve('src', 'shared'),
       constants: path.resolve('src', 'constants.scss'),
-      jsConstants: path.resolve('src', 'constants.js'),
+      '@pages': path.resolve('src', 'pages'),
+      '@components': path.resolve('src', 'components'),
+      '@layout': path.resolve('src', 'Layout'),
       utils: path.resolve('src', 'utils'),
       store: path.resolve('src', 'store.js'),
     },

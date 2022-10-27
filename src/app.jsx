@@ -1,25 +1,13 @@
 import React from 'react';
+import { Home } from '@pages';
+import Layout from './Layout';
 
 const App = () => {
   console.log('Starting App');
   return (
-    <div>
-      <header>
-        <div>Logo</div>
-        <nav>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </nav>
-      </header>
-      <footer>
-        <a href='' />
-        <a href='' />
-      </footer>
-    </div>
+    <Layout>
+      <Home />
+    </Layout>
   );
 };
 
