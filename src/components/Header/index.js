@@ -10,10 +10,10 @@ const Header = () => {
       <div className={s.logo}>Logo</div>
       <nav className={s.nav}>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li className={s.navItem}>Home</li>
+          <li className={s.navItem}>Pokedex</li>
+          <li className={s.navItem}>Legendaries</li>
+          <li className={s.navItem}>Documentation</li>
         </ul>
       </nav>
     </header>
