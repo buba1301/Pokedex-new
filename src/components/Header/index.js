@@ -1,8 +1,7 @@
 import React from 'react';
 
 import s from './Header.module';
-
-const menuNames = ['Home', 'Pokedex', 'Legendaries', 'Documentation'];
+import MainNav from './MainNav/MainNav';
 
 const Header = () => {
   console.log('Render header');
@@ -10,17 +9,7 @@ const Header = () => {
   return (
     <header className={s.header}>
       <div className={s.logo}>Logo</div>
-      <nav className={s.nav}>
-        <ul>
-          {menuNames.map((name) => (
-            <li key={name} className={s.navItem}>
-              <a href='' className={s.link}>
-                {name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <MainNav />
     </header>
   );
 };
