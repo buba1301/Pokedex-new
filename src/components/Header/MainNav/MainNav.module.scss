@@ -1,52 +1,111 @@
 @import '../../../variables';
 
+
 .nav {
-	width: 70%;
-	height: 40px;
+	visibility: hidden;
+}
 
-	ul {
-		width: 100%;
-		height: 100%;
-		margin: 0;
-		padding: 0;
+.button {
+	all: unset;
+	width: 31px;
+	height: 22px;
+	cursor: pointer;
+	visibility: visible;
 
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 1px;
+	&:hover {
+		span:nth-of-type(1) {
+			width: 33px;
+		}
 
+		span:nth-of-type(2) {
+			width: 40px;
+		}
 
+		span:nth-of-type(3) {
+			width: 30px;
+		}
 	}
 }
 
-.navItem {
-	height: 100%;
-	position: relative;
-	list-style-type: none;
-	font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-	text-align: center;
+.active {
+	span:nth-of-type(1) {
+		transform: rotate(45deg) translate(5px, 4px);
+		width: 31px;
+	}
+
+	span:nth-of-type(2) {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	span:nth-of-type(3) {
+		transform: rotate(-45deg) translate(7px, -7px);
+		width: 31px;
+	}
 }
 
-.link {
-	text-decoration: none;
-	color: $dark;
-	cursor: pointer;
-}
-
-.navItem:after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	transform: scaleX(0);
-	height: 2px;
-	bottom: 0;
-	left: 0;
+.burgerMenu {
+	display: block;
+	width: 31px;
+	height: 5.5px;
+	margin-bottom: 2.5px;
+	border-radius: 2px;
 	background-color: $dark;
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
+	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.navItem:hover:after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+@media (min-width: 768px) {
+	.nav {
+		width: 65%;
+		height: 40px;
+		flex-grow: 1;
+		visibility: visible;
+
+		ul {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	.navItem {
+		height: 100%;
+		position: relative;
+		list-style-type: none;
+		font-size: clamp(1.2rem, 3vw, 2rem);
+		text-align: center;
+	}
+
+	.link {
+		text-decoration: none;
+		color: $dark;
+		cursor: pointer;
+	}
+
+	.navItem:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: $dark;
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-out;
+	}
+
+	.navItem:hover:after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+
+	.button {
+		visibility: hidden;
+	}
 }
