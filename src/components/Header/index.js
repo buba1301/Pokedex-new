@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className={s.header}>
       <div className={s.logo}>
-        <ReactLogo />
+        <ReactLogo viewBox='0 0 60 25' />
       </div>
       <MainNav />
     </header>

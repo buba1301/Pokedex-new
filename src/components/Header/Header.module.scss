@@ -15,7 +15,15 @@
 }
 
 .logo {
+	position: relative;
 	width: 25%;
 	height: 100%;
-	text-align: center;
+
+	svg {
+		position: absolute;
+		height: 50%;
+		width: 100%;
+		left: 0;
+		top: 25px;
+	}
 }
