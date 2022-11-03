@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import cn from 'classnames';
 
 import s from './MainNav.module';
@@ -6,14 +6,15 @@ import s from './MainNav.module';
 const menuNames = ['Home', 'Pokedex', 'Legendaries', 'Documentation'];
 
 const MainNav = () => {
-  console.log('REBDER NAV');
-
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenMenu = () => {
     setIsOpen((prevState) => !prevState);
-    console.log('click', isOpen);
   };
+
+  const navClass = cn(s.nav, {
+    [s.openNav]: isOpen,
+  });
 
   const buttonClass = cn(s.button, {
     [s.active]: isOpen,
@@ -21,7 +22,7 @@ const MainNav = () => {
 
   return (
     <>
-      <nav className={s.nav} aria-label='Main'>
+      <nav className={navClass} aria-label='Main'>
         <ul>
           {menuNames.map((name) => (
             <li key={name} className={s.navItem}>
