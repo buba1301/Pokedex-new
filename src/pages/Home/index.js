@@ -7,6 +7,7 @@ const Home = () => {
 
   return (
     <main>
+      Home
       <LeftSection />
       <Paralax />
     </main>

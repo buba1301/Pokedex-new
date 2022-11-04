@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import cn from 'classnames';
 
 import s from './MainNav.module';
@@ -26,9 +27,12 @@ const MainNav = () => {
         <ul>
           {menuNames.map((name) => (
             <li key={name} className={s.navItem}>
-              <a href='' className={s.link}>
+              <Link
+                to={`/${name !== 'Home' ? name.toLowerCase() : ''}`}
+                className={s.link}
+              >
                 {name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

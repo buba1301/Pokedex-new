@@ -1,6 +1,7 @@
 import Pokedex from './Pokedex';
 import Home from './Home';
 import Legendaries from './Legendaries';
-import ErrorPage from './Error';
+import NoMatch from './NoMatch';
+import Docs from './Docs/Docs';
 
-export { Pokedex, Home, Legendaries, ErrorPage };
+export { Pokedex, Home, Legendaries, NoMatch, Docs };
