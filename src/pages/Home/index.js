@@ -4,6 +4,7 @@ import Paralax from '../../components/Paralax';
 
 const Home = () => {
   console.log('RENDER HOME');
+
   return (
     <main>
       <LeftSection />
