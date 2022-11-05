@@ -6,6 +6,8 @@ import s from './MainNav.module';
 
 const menuNames = ['Home', 'Pokedex', 'Legendaries', 'Documentation'];
 
+// TODO: добавить закрытие по клику на ссылку для мобильной версии
+
 const MainNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
