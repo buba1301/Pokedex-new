@@ -1,5 +1,4 @@
 import React from 'react';
-import SerachandFiltersForm from '../../components/SearchandFiltersForm';
 
 const Legendaries = () => (
   <main>

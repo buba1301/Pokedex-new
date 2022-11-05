@@ -1,0 +1,29 @@
+@import '../../../variables';
+
+.root {
+	width: 100%;
+	flex: 1 1 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+
+	justify-items: center;
+	align-items: center;
+}
+
+.card {
+	border-radius: 10px;
+}
+
+@media (min-width: 320px) {
+	.root {
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	}
+
+	.card {
+		width: 100%;
+		max-width: 352px;
+		height: 135px;
+		background-color: $second;
+	}
+}

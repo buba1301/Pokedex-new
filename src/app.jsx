@@ -11,8 +11,8 @@ const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path='pokedex' element={<Pokedex />} />
+        <Route path='home' element={<Home />} />
+        <Route index element={<Pokedex />} />
         <Route path='legendaries' element={<Legendaries />} />
         <Route path='documentation' element={<Docs />} />
         <Route path='*' element={<NoMatch />} />

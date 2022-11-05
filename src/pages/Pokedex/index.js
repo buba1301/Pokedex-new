@@ -1,11 +1,11 @@
 import React from 'react';
-import SerachandFiltersForm from '../../components/SearchandFiltersForm';
+import PokemonsContainer from '../../components/PokemonsContainer';
 
 const Pokedex = () => {
   console.log('RENDER POKEDEX');
   return (
     <main>
-      <SerachandFiltersForm />
+      <PokemonsContainer />
     </main>
   );
 };
