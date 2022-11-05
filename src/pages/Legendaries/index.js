@@ -1,27 +1,9 @@
 import React from 'react';
+import Legend from '../../components/LegendContainer/Index';
 
 const Legendaries = () => (
   <main>
-    <h1>Legendaries</h1>
-    <div>
-      <div>
-        <img />
-      </div>
-      <div>
-        <h2 />
-        <p />
-        <div>
-          <ul>
-            <li />
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div>
-      <ul>
-        <li />
-      </ul>
-    </div>
+    <Legend />
   </main>
 );
 

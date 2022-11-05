@@ -1,0 +1,53 @@
+.root {
+	width: 100%;
+	max-width: 1125px;
+	margin: 0 auto;
+	background: linear-gradient(4deg, rgba(245, 219, 19, 1) 0%, rgba(214, 160, 4, 1) 41%);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.info {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 500px;
+	background: blue;
+}
+
+.imgContainer,
+.descriptions {
+	width: 100%;
+	height: 50%;
+}
+
+.imgContainer {
+	background-color: red;
+}
+
+.descriptions {
+	background-color: cadetblue;
+}
+
+@media (min-width: 768px) {
+	.info {
+		flex: 1 1 auto;
+		flex-direction: row;
+	}
+
+	.imgContainer {
+		width: 50%;
+		height: 100%;
+	}
+
+	.descriptions {
+		width: 50%;
+		height: 100%;
+	}
+}
