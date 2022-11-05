@@ -1,8 +1,10 @@
+@import '../../variables';
+
 .root {
 	width: 100%;
 	max-width: 1125px;
 	margin: 0 auto;
-	background: linear-gradient(4deg, rgba(245, 219, 19, 1) 0%, rgba(214, 160, 4, 1) 41%);
+	background-color: $dark;
 
 	display: flex;
 	flex-direction: column;
