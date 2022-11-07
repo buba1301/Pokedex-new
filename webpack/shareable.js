@@ -6,7 +6,7 @@ module.exports = {
       shared: path.resolve('src', 'shared'),
       constants: path.resolve('src', 'constants.scss'),
       '@assets': path.resolve('src', 'assets'),
-      '@pages': path.resolve('src', 'pages'),
+      '@roots': path.resolve('src', 'roots'),
       '@components': path.resolve('src', 'components'),
       '@layout': path.resolve('src', 'Layout'),
       '@variables': path.resolve('_variables.scss'),
