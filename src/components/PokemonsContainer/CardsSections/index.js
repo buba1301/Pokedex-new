@@ -6,11 +6,13 @@ import s from './CardsSection.module';
 // const cards = new Array(9).fill('card');
 
 const CardsSection = () => {
-  const { pokemonsList } = useLoaderData();
+  const { data } = useLoaderData();
+
+  console.log('CardsSection', data);
 
   return (
     <section className={s.root}>
-      {pokemonsList.results.map(({ name }) => (
+      {data.map(({ name }) => (
         <div key={name} className={s.card}>
           {name}
         </div>

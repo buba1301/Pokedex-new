@@ -4,7 +4,16 @@ import PokemonsContainer from '../../components/PokemonsContainer';
 
 export const loader = async () => {
   const pokemonsList = await config.getPokemons();
-  return { pokemonsList };
+
+  const urls = pokemonsList.results.map(({ name }) =>
+    config.getPokemonByName(name)
+  );
+
+  const data = await Promise.all(urls);
+
+  console.log('DATA', data);
+
+  return { data };
 };
 
 //TODO: как запрашивать необходиое количество в зависимости от размера экрана
