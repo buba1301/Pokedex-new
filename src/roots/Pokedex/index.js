@@ -7,6 +7,8 @@ export const loader = async () => {
   return { pokemonsList };
 };
 
+//TODO: как запрашивать необходиое количество в зависимости от размера экрана
+
 const Pokedex = () => {
   console.log('RENDER POKEDEX');
 
