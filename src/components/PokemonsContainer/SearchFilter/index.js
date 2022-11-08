@@ -11,6 +11,7 @@ const Search = () => {
         type='search'
         className={s.input}
         placeholder='Search Pokemon'
+        className={s.searchInput}
       />
     </form>
   );

@@ -29,7 +29,19 @@ const Filters = () => {
             id={filter}
             onClick={handleOpenMenu}
           ></button>
-          {isOpen === filter && <div className={s.filtersWrap} />}
+          {isOpen === filter && (
+            <ul className={s.filtersMenu}>
+              <li className={s.dropDownInput}>
+                <label>
+                  <input
+                    type='checkbox'
+                    className={s.inputCheckbox}
+                  />
+                  Checkbox
+                </label>
+              </li>
+            </ul>
+          )}
         </div>
       ))}
     </form>
