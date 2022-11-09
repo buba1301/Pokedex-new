@@ -1,19 +1,21 @@
 import React from 'react';
+import { Form } from 'react-router-dom';
 
 import s from './SearchFilter.module';
 
 const Search = () => {
-  console.log('RENDER Search');
+  console.log('RENDER: Search');
 
   return (
-    <form className={s.form}>
+    <Form className={s.form} id='search-form' role='search'>
       <input
+        id='q'
         type='search'
-        className={s.input}
-        placeholder='Search Pokemon'
+        placeholder='Search Pokemon by Name'
         className={s.searchInput}
+        name='q'
       />
-    </form>
+    </Form>
   );
 };
 

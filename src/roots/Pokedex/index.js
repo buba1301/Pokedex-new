@@ -2,16 +2,15 @@ import React from 'react';
 import config from '../../api';
 import PokemonsContainer from '../../components/PokemonsContainer';
 
-export const loader = async () => {
-  const pokemonsList = await config.getPokemons();
+export const loader = async ({ request }) => {
+  const url = new URL(request.url);
+  const pokemonName = url.searchParams.get('q');
 
-  const urls = pokemonsList.results.map(({ name }) =>
-    config.getPokemonByName(name)
-  );
+  console.log('POKEDEX LOADER', pokemonName);
 
-  const data = await Promise.all(urls);
+  const data = await config.getPokemons(pokemonName);
 
-  console.log('DATA', pokemonsList);
+  console.log('POKEDEX LOADER DATA', data);
 
   return { data };
 };
@@ -21,11 +20,7 @@ export const loader = async () => {
 const Pokedex = () => {
   console.log('RENDER POKEDEX');
 
-  return (
-    <main>
-      <PokemonsContainer />
-    </main>
-  );
+  return <PokemonsContainer />;
 };
 
 export default Pokedex;

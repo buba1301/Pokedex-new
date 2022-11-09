@@ -17,3 +17,8 @@ const Layout = () => {
 };
 
 export default Layout;
+
+/* display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; */
