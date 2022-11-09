@@ -17,6 +17,7 @@ const MainNav = () => {
 
   const navClass = cn(s.nav, {
     [s.openNav]: isOpen,
+    [s.closeNav]: !isOpen,
   });
 
   const buttonClass = cn(s.button, {

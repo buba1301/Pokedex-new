@@ -3,8 +3,6 @@ import { useLoaderData } from 'react-router-dom';
 
 import s from './CardsSection.module';
 
-// const cards = new Array(9).fill('card');
-
 const CardsSection = () => {
   const { data } = useLoaderData();
 
