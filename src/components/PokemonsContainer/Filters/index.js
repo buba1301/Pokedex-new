@@ -3,7 +3,24 @@ import React, { useState } from 'react';
 
 import s from './Filter.module';
 
-const filters = ['1', '2', '3'];
+const filters = ['types', 'attack', 'experience'];
+
+const filtersValues = {
+  types: [
+    'Bug',
+    'Dark',
+    'Dragon',
+    'Electric',
+    'Normal',
+    'Rock',
+    'Fairy',
+    'Fighting',
+    'Poison',
+    'Ground',
+  ],
+  attack: ['50000', '100000', '150000'],
+  experience: ['50000', '100000', '150000'],
+};
 
 const Filters = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,18 +45,25 @@ const Filters = () => {
             type='button'
             id={filter}
             onClick={handleOpenMenu}
-          ></button>
+          >
+            {filter}
+            <span>1</span>
+          </button>
+
           {isOpen === filter && (
             <ul className={s.filtersMenu}>
-              <li className={s.dropDownInput}>
-                <label>
-                  <input
-                    type='checkbox'
-                    className={s.inputCheckbox}
-                  />
-                  Checkbox
-                </label>
-              </li>
+              {filtersValues[filter].map((value) => (
+                <li className={s.dropDownInput} key={value}>
+                  <label htmlFor={value}>
+                    <input
+                      id={value}
+                      type='checkbox'
+                      className={s.inputCheckbox}
+                    />
+                    {value}
+                  </label>
+                </li>
+              ))}
             </ul>
           )}
         </div>

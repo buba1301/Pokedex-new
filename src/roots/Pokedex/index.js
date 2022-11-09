@@ -11,7 +11,7 @@ export const loader = async () => {
 
   const data = await Promise.all(urls);
 
-  console.log('DATA', data);
+  console.log('DATA', pokemonsList);
 
   return { data };
 };
