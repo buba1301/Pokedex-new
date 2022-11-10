@@ -12,7 +12,7 @@ export const loader = async ({ request }) => {
 
   console.log('POKEDEX LOADER DATA', data);
 
-  return { data };
+  return { data, pokemonName };
 };
 
 //TODO: как запрашивать необходиое количество в зависимости от размера экрана

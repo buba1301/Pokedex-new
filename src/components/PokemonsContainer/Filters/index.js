@@ -23,6 +23,8 @@ const filtersValues = {
   experience: ['50000', '100000', '150000'],
 };
 
+//TODO: вынести button в отдельный элемент
+
 const Filters = () => {
   const [isOpen, setIsOpen] = useState(false);
   console.log('RENDER FILTERS');

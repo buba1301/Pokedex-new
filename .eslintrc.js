@@ -24,7 +24,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'react/function-component-definition': 'off',
     'react/prop-types': 'off',
-    'no-console': 'error',
+    'no-console': 'off',
     'react/jsx-filename-extension': [
       'error',
       { extensions: ['.jsx', '.tsx', '.ts', '.js'] },
