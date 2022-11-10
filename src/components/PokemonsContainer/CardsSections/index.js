@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useWindowSize from '../../../hooks/useWindowSize';
+import Card from '../../../shared/Card';
 
 import s from './CardsSection.module';
 
@@ -18,13 +19,11 @@ const getLimitValue = (width) => {
 };
 
 const CardsSection = () => {
-  const { data } = useLoaderData();
-  const { width } = useWindowSize();
-
-  console.log('CardsSection', width);
-
   const [limit, setLimit] = useState();
   const [offset, setOffset] = useState(0);
+
+  const { data } = useLoaderData();
+  const { width } = useWindowSize();
 
   useEffect(() => {
     setLimit(getLimitValue(width));
@@ -32,12 +31,12 @@ const CardsSection = () => {
 
   const dataSlice = data.slice(offset, limit);
 
+  console.log('CardsSection', dataSlice);
+
   return (
     <section className={s.root}>
-      {dataSlice.map(({ name }) => (
-        <div key={name} className={s.card}>
-          {name}
-        </div>
+      {dataSlice.map(({ name, id, types, stats, sprites }) => (
+        <Card name={name} key={id} types={types} sprites={sprites} />
       ))}
     </section>
   );
