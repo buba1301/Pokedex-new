@@ -3,20 +3,20 @@
 	height: 100%;
 
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 
 }
 
-@media (min-width: 1025px) {}
-
-// TODO: ipad pro поправить стили
-
-@media (min-width: 821px) {
+@media (min-width: 1025px) {
 	.container {
-		width: 533px;
-		gap: 65px;
-		align-self: flex-start;
+		width: 100%;
+	}
+}
+
+@media (min-width: 820px) {
+	.container {
+		gap: 20px;
 	}
 
 	.dropDown {

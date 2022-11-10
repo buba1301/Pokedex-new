@@ -3,7 +3,7 @@ import { PokemonClient } from 'pokenode-ts';
 const app = new PokemonClient();
 
 const config = {
-  getPokemons: async (query, limit = 8, offset = 0) => {
+  getPokemons: async (query, limit = 12, offset = 0) => {
     if (query) {
       console.log('API QUERY', query);
 
