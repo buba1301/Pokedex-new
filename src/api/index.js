@@ -3,7 +3,7 @@ import { PokemonClient } from 'pokenode-ts';
 const app = new PokemonClient();
 
 const config = {
-  getPokemons: async (query, limit = 12, offset = 0) => {
+  getPokemons: async (query, limit = 60, offset = 0) => {
     const pokemonsList = await app.listPokemons(offset, limit);
 
     const urls = pokemonsList.results.map(({ name }) =>
