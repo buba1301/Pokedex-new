@@ -1,0 +1,99 @@
+@import '../../variables';
+
+.nav {
+	width: 100%;
+	display: none;
+	border-radius: 0 0 16px 16px;
+	display: block;
+	position: absolute;
+	left: 0;
+	background: linear-gradient(180deg, rgba(245, 219, 19, 1) 0%, rgba(242, 184, 7, 1) 63%);
+	height: 40vh;
+
+	ul {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		margin: 0;
+		padding: 0;
+		flex-direction: column;
+		align-items: center;
+		list-style-type: none;
+	}
+}
+
+.openNav {
+	top: 80px;
+	transition: top 0.5s ease-out;
+	z-index: 900;
+
+}
+
+ul {
+	display: block;
+}
+
+
+.closeNav {
+	top: -410px;
+	transition: top 0.5s ease-out;
+	z-index: 900;
+}
+
+
+.button {
+	all: unset;
+	width: 31px;
+	height: 22px;
+	cursor: pointer;
+	visibility: visible;
+	z-index: 1000;
+
+	&:hover {
+		span:nth-of-type(1) {
+			width: 33px;
+		}
+
+		span:nth-of-type(2) {
+			width: 40px;
+		}
+
+		span:nth-of-type(3) {
+			width: 30px;
+		}
+	}
+}
+
+.active {
+	span:nth-of-type(1) {
+		transform: rotate(45deg) translate(5px, 4px);
+		width: 31px;
+	}
+
+	span:nth-of-type(2) {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	span:nth-of-type(3) {
+		transform: rotate(-45deg) translate(7px, -7px);
+		width: 31px;
+	}
+}
+
+.burgerMenu {
+	display: block;
+	width: 31px;
+	height: 5.5px;
+	margin-bottom: 2.5px;
+	border-radius: 2px;
+	background-color: $dark;
+	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media (min-width: 769px) {
+	.button {
+		visibility: hidden;
+	}
+}
