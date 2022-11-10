@@ -36,7 +36,13 @@ const CardsSection = () => {
   return (
     <section className={s.root}>
       {dataSlice.map(({ name, id, types, stats, sprites }) => (
-        <Card name={name} key={id} types={types} sprites={sprites} />
+        <Card
+          name={name}
+          key={id}
+          types={types}
+          sprites={sprites}
+          stats={stats}
+        />
       ))}
     </section>
   );
