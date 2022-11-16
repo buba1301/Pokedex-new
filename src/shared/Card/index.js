@@ -5,7 +5,14 @@ import cn from 'classnames';
 import s from './Card.module';
 
 //TODO: name is capitalize
-//TODO: backround how??
+
+//TODO: открывать модалку с данными (запросы и тд);
+
+const capitalize = ([first, ...rest]) => {
+  console.log('rest', rest);
+
+  return first.toUpperCase() + rest;
+};
 
 const Card = ({ name, types, stats, sprites }) => {
   const statsList = [stats[1], stats[2]];
@@ -19,7 +26,7 @@ const Card = ({ name, types, stats, sprites }) => {
   return (
     <div key={name} className={s.card}>
       <div className={s.stats}>
-        <h5>{name}</h5>
+        <h5>{capitalize(name)}</h5>
         <div className={s.statWrap}>
           {statsList.map(({ stat, base_stat }) => (
             <div key={stat.name}>
