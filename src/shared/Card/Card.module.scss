@@ -53,17 +53,23 @@ $img-scale: 1.001;
 }
 
 .typesWrap {
-	width: 100%;
+	width: 110%;
 	height: 20px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	z-index: 1000;
 
-	p {
+	span {
+		width: 90%;
 		margin: 0;
 		padding: 0;
-
+		border-radius: 20px;
+		text-align: center;
+		font-size: 12px;
+		font-weight: bold;
+		box-shadow: 2px 2px 11px 0px rgba(34, 60, 80, 0.4);
 	}
 }
 
@@ -109,7 +115,6 @@ $value in $backgroundType {
 }
 
 .card:hover {
-
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
 	h5 {

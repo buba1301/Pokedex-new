@@ -30,7 +30,9 @@ const Card = ({ name, types, stats, sprites }) => {
         </div>
         <div className={s.typesWrap}>
           {types.map(({ type }) => (
-            <span key={type.name}>{type.name}</span>
+            <span key={type.name} className={s[type.name]}>
+              {type.name}
+            </span>
           ))}
         </div>
       </div>
