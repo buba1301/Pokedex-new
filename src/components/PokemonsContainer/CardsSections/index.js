@@ -7,14 +7,12 @@ import s from './CardsSection.module';
 
 const getLimitValue = (width) => {
   if (width > 1024) {
-    console.log('getLimitValue', width);
     return 9;
   }
 
   if (width >= 820) {
     return 12;
   }
-  console.log('!!!');
   return 10;
 };
 
@@ -30,8 +28,6 @@ const CardsSection = () => {
   }, [limit, width]);
 
   const dataSlice = data.slice(offset, limit);
-
-  console.log('CardsSection', dataSlice);
 
   return (
     <section className={s.root}>

@@ -1,6 +1,7 @@
 @use "sass:map";
 @import '../../variables';
 
+$img-scale: 1.001;
 
 .card {
 	border-radius: 10px;
@@ -12,6 +13,7 @@
 	height: 135px;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
+	cursor: pointer;
 }
 
 .stats {
@@ -82,7 +84,8 @@
 .image {
 	width: 100%;
 	height: 100%;
-	background: map.get($backgroundType, "dark");
+	margin: 0;
+	padding: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -92,5 +95,28 @@
 		background-repeat: no-repeat;
 		object-fit: fill;
 		object-position: center;
+		transform-origin: center;
+		transform: scale($img-scale);
+		transition: transform 0.4s ease-in-out;
+	}
+}
+
+@each $name,
+$value in $backgroundType {
+	.#{$name} {
+		background: $value;
+	}
+}
+
+.card:hover {
+
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+	h5 {
+		color: $danger
+	}
+
+	img {
+		transform: scale(1.1);
 	}
 }

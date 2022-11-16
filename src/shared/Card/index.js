@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import React from 'react';
+import cn from 'classnames';
 
 import s from './Card.module';
 
@@ -8,6 +9,10 @@ import s from './Card.module';
 
 const Card = ({ name, types, stats, sprites }) => {
   const statsList = [stats[1], stats[2]];
+
+  const firstType = types[0].type.name;
+
+  const imageClassNames = cn(s.image, s[firstType]);
 
   console.log('RENDER Card', statsList);
 
@@ -29,14 +34,14 @@ const Card = ({ name, types, stats, sprites }) => {
           ))}
         </div>
       </div>
-      <div className={s.image}>
+      <figure className={imageClassNames}>
         <img
           src={sprites.other.dream_world.front_default}
           alt='Pokemon'
           width='235'
           height='135'
         />
-      </div>
+      </figure>
     </div>
   );
 };
