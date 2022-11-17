@@ -11,7 +11,9 @@ const PokemonsContainer = () => {
 
   return (
     <main className={s.root}>
-      <h1>800 Pokemons for you to choose your favorite</h1>
+      <h1 className={s.header}>
+        800 Pokemons for you to choose your favorite
+      </h1>
       <Search />
       <Filters />
       <CardsSection />
