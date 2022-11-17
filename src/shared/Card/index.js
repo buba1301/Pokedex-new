@@ -4,8 +4,6 @@ import cn from 'classnames';
 
 import s from './Card.module';
 
-//TODO: name is capitalize
-
 //TODO: открывать модалку с данными (запросы и тд);
 
 const capitalize = ([first, ...rest]) => {
@@ -21,12 +19,11 @@ const Card = ({ name, types, stats, sprites }) => {
 
   const imageClassNames = cn(s.image, s[firstType]);
 
-  console.log('RENDER Card', statsList);
-
   return (
     <div key={name} className={s.card}>
       <div className={s.stats}>
         <h5>{capitalize(name)}</h5>
+
         <div className={s.statWrap}>
           {statsList.map(({ stat, base_stat }) => (
             <div key={stat.name}>
@@ -35,6 +32,7 @@ const Card = ({ name, types, stats, sprites }) => {
             </div>
           ))}
         </div>
+
         <div className={s.typesWrap}>
           {types.map(({ type }) => (
             <span key={type.name} className={s[type.name]}>
@@ -43,6 +41,7 @@ const Card = ({ name, types, stats, sprites }) => {
           ))}
         </div>
       </div>
+
       <figure className={imageClassNames}>
         <img
           src={sprites.other.dream_world.front_default}
