@@ -5,7 +5,7 @@
 	width: 31px;
 	height: 22px;
 	cursor: pointer;
-	visibility: visible;
+	display: block;
 	z-index: 1000;
 
 	&:hover {
@@ -25,39 +25,22 @@
 
 .nav {
 	width: 100%;
-	display: none;
+	height: 40vh;
 	border-radius: 0 0 16px 16px;
 	display: block;
+
+}
+
+.list {
 	position: absolute;
-	left: 0;
-	background: linear-gradient(180deg, rgba(245, 219, 19, 1) 0%, rgba(242, 184, 7, 1) 63%);
-	height: 40vh;
-
-	ul {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		margin: 0;
-		padding: 0;
-		flex-direction: column;
-		align-items: center;
-		list-style-type: none;
-	}
-}
-
-.openNav {
-	top: 80px;
-	transition: top 0.5s ease-out;
-}
-
-ul {
-	display: block;
-}
-
-.closeNav {
-	top: -410px;
-	transition: top 0.5s ease-out;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	flex-direction: column;
+	align-items: center;
+	list-style-type: none;
 }
 
 .navItem {
@@ -107,19 +90,19 @@ ul {
 		flex-grow: 1;
 		display: block;
 		background: $third;
+	}
 
-		ul {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
+	.list {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
 
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-		}
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.navItem {
@@ -152,6 +135,6 @@ ul {
 	}
 
 	.button {
-		visibility: hidden;
+		display: none;
 	}
 }
