@@ -3,10 +3,8 @@ import cn from 'classnames';
 
 import s from './DropDown.module';
 
-const DropDown = ({ children, isOpen, openNav }) => {
-  console.log('RENDER DropDown');
-
-  const navClass = cn(s.nav, {
+const DropDown = ({ children, isOpen, menuType }) => {
+  const navClass = cn(s.root, s[menuType], {
     [s.openNav]: isOpen,
     [s.closeNav]: !isOpen,
   });
