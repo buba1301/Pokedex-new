@@ -4,23 +4,15 @@
 $img-scale: 1.001;
 
 .card {
-	border-radius: 10px;
-}
-
-.card {
 	width: 100%;
 	max-width: 352px;
 	height: 135px;
+	border-radius: 10px;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	cursor: pointer;
 	transform: translateY(0);
 	transition: transform 0.4s ease-in-out;
-}
-
-.card:hover {
-	transform: translateY(-5px);
-
 }
 
 .stats {
@@ -124,6 +116,7 @@ $value in $backgroundType {
 }
 
 .card:hover {
+	transform: translateY(-5px);
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
 	h5 {
