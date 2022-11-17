@@ -1,0 +1,48 @@
+.root {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 30px;
+
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.typesSection {
+	width: 100%;
+	display: grid;
+	grid-template-rows: 40px 1fr;
+}
+
+.header {
+	width: 50%
+}
+
+.typesSection:not(:last-child)::after {
+	content: "";
+	width: 100%;
+	border: 1px solid #fff;
+	margin-top: 20px;
+}
+
+.typesList {
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.inputsWrap {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.input {
+	width: 100%;
+}
+
+.button {
+	grid-column: 2/3;
+}
